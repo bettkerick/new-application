@@ -1,0 +1,51 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2>Register Here</h2>
+  <form (submit)="doSignup()">
+    <ion-item>
+      <ion-label stacked>Name</ion-label>
+      <ion-input [(ngModel)]="regData.name" name="name" type="text" placeholder="Your name" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input [(ngModel)]="regData.email" name="email" type="email" placeholder="Your email" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input [(ngModel)]="regData.password" name="password" type="password" placeholder="Your password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Address</ion-label>
+      <ion-input [(ngModel)]="regData.address" name="address" type="text" placeholder="Your address" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Phone Number</ion-label>
+      <ion-input [(ngModel)]="regData.phone" name="phone" type="number" placeholder="Your phone number" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Id Number</ion-label>
+      <ion-input [(ngModel)]="regData.idno" name="idno" type="number" placeholder="Your id number" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Pin Number</ion-label>
+      <ion-input [(ngModel)]="regData.pin" name="pin" type="number" placeholder="Your pin" ></ion-input>
+    </ion-item>
+    <button ion-button block type="submit">
+      SignUp
+    </button>
+  </form>
+</ion-content>

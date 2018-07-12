@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Obituary App</ion-title>
+  </ion-navbar>
+ 
+  <ion-toolbar no-border-top class="toolbar toolbar-ios statusbar-padding">
+    <ion-segment mode="md" [(ngModel)]="galleryType" class="segment segment-ios ng-valid ng-touched ng-dirty">
+      <ion-segment-button value="obituaries">
+        Obituaries
+      </ion-segment-button>
+      <ion-segment-button value="appreciations">
+        Appreciations
+      </ion-segment-button>
+      <ion-segment-button value="memorials">
+        Memorials
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content padding>
+ 
+ <button ion-button (click)="getData()">Get Data</button>
+  <ion-row>ID: {{result.id}}</ion-row>
+  <ion-row>Name: {{result.name}}</ion-row>
+  <ion-row>Details: {{result.details}}</ion-row>
+   <ion-row>Photo: {{result.photo}}</ion-row>
+   <ion-row>Created_at: {{result.created_at}}</ion-row>
+   <ion-row>Update_at: {{result.update_at}}</ion-row>
+   
+</ion-content>

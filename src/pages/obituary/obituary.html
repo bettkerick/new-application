@@ -1,0 +1,76 @@
+<!--
+  Generated template for the ObituaryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Obituary</ion-title>
+
+	</ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+	
+    <form (submit)="doObi()">
+     <ion-item>
+                <ion-label color="primary" floating>Name(<span class="red">*</span>)</ion-label>
+                <ion-input   [(ngModel)]="regData.name" name="name" type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                <ion-label color="primary" floating>Date of Burial</ion-label>
+                <ion-datetime  [(ngModel)]="regData.date" name="date_of_burial" displayFormat="MM/DD/YYYY" ></ion-datetime>
+                </ion-item>
+                <ion-item>
+                <ion-label color="primary" floating>Details</ion-label><br>
+                <ion-textarea  [(ngModel)]="regData.details" name="details" placeholder=" "></ion-textarea>
+                </ion-item>
+                <ion-item>
+                 <input type="file" [(ngModel)]="regData.photo" name="myImage" image-with-preview
+                 ng-model="image"
+                 accept="image/jpeg,image/png"
+                 dimensions="height < 400 && width < 1800 && width > 2 * height">
+                <span class="error" ng-show="myForm.myImage.$error.image">
+                </span>
+                <span class="error" ng-show="myForm.myImage.$error.dimensions">
+                </span>
+                <img ng-show="image.src"/>
+                </ion-item>
+                 <ion-item>
+                 <input type="file" [(ngModel)]="regData.map_photo" name="myImage" image-with-preview
+                 ng-model="image"
+                 accept="image/jpeg,image/png"
+                 dimensions="height < 400 && width < 1800 && width > 2 * height">
+                <span class="error" ng-show="myForm.myImage.$error.image">
+                </span>
+                <span class="error" ng-show="myForm.myImage.$error.dimensions">
+                </span>
+                <img ng-show="image.src"/>
+                </ion-item>
+                 <ion-item>
+                 <input type="file" [(ngModel)]="regData.eulogy_photo" name="myImage" image-with-preview
+                 ng-model="image"
+                 accept="image/jpeg,image/png"
+                 dimensions="height < 400 && width < 1800 && width > 2 * height">
+                <span class="error" ng-show="myForm.myImage.$error.image">
+                </span>
+                <span class="error" ng-show="myForm.myImage.$error.dimensions">
+                </span>
+                <img ng-show="image.src"/>
+                </ion-item>
+                
+                <button ion-button block type="submit">
+                SUBMIT
+                </button>
+</form>
+</ion-content>
